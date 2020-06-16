@@ -1,0 +1,3 @@
+Bonjour. Ceci est la page GitHub dédiée au programme MacGyver Maze que j'ai eu à programmer dans le cadre de la formation développer python sur la plateforme OpenClassrooms. Ce programme est écrit en Python 3 et développé en utilisant l'éditeur Sublime Text et l'IDLE pour la version 3.7.6 de python. C'est un jeu de labyrinthe
+Simple en 2D où il faut à l'aide des touches directionnelles du clavier naviguer dans un labyrinthe en ramassant des objets et arriver en face du méchant au bout du labyrinthe pour gagner. Si le joueur n'a pas ramassé tous les objets en arrivant sur la case du méchant, il perds. 
+Enjoy.
