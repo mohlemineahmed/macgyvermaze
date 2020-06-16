@@ -41,3 +41,13 @@ class Maze:
             maze_structure[randindex3] = randlist3
 
         self.structure = maze_structure  # Sauvegarde
+        
+    def display(self, window):  # Pour afficher le labyrinthe après avoir run la fonction generate
+
+        # These variables correspond to the pictures which will represent each texture of the labyrinth
+        wall = pygame.image.load(wall_img)
+        badguy = pygame.image.load(badguy_img)
+        background = pygame.image.load(background_img)
+        aiguille = pygame.image.load(a_img)
+        ether = pygame.image.load(b_img)
+        tube = pygame.image.load(c_img)
