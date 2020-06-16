@@ -10,3 +10,9 @@ compteurA = 0
 continueMain = True
 youwon = pygame.image.load(win_img).convert()
 youlost = pygame.image.load(lose_img).convert()
+while continueMain:
+    startingMenu = pygame.image.load(titlescreen_img).convert()
+    window.blit(startingMenu, (0, 0))
+    pygame.display.flip()
+    continueTitleScreen = True
+    continueGame= True
