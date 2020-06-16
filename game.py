@@ -16,3 +16,12 @@ while continueMain:
     pygame.display.flip()
     continueTitleScreen = True
     continueGame= True
+    while continueTitleScreen:
+        for event in pygame.event.get():
+            if event.type == KEYDOWN and event.key == K_ESCAPE:
+                continueTitleScreen = False
+                continueMain = False
+                continueGame= False
+                pygame.quit()
+                os._exit(0)
+            elif event.type == KEYDOWN and event.key == K_RETURN:
