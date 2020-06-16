@@ -82,3 +82,32 @@ class MacGyver:
         self.y = 0
         self.move = pygame.image.load(mcgyver_img).convert_alpha()
         self.maze = maze
+    def deplacer(self, move):
+
+        if move == 'right':
+
+            if self.cell_x < (15 - 1):
+
+                if self.maze.structure[self.cell_y][self.cell_x+1] != 'W':
+
+                    self.cell_x += 1
+
+                    self.x = self.cell_x * sprite_size
+
+        if move == 'left':
+            if self.cell_x > 0:
+                if self.maze.structure[self.cell_y][self.cell_x-1] != 'W':
+                    self.cell_x -= 1
+                    self.x = self.cell_x * sprite_size
+
+        if move == 'up':
+            if self.cell_y > 0:
+                if self.maze.structure[self.cell_y-1][self.cell_x] != 'W':
+                    self.cell_y -= 1
+                    self.y = self.cell_y * sprite_size
+
+        if move == 'down':
+            if self.cell_y < (15 - 1):
+                if self.maze.structure[self.cell_y+1][self.cell_x] != 'W':
+                    self.cell_y += 1
+                    self.y = self.cell_y * sprite_size
