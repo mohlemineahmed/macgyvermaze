@@ -1,0 +1,15 @@
+sprite_size = 30
+window_size = 15 * sprite_size
+titlescreen_img = "image/titlescreen.jpg"
+win_img = "image/youwon.jpg"
+lose_img = "image/youlost.jpg"
+badguy_img = "image/badguy.png"
+background_img = "image/background.jpeg"
+wall_img = "image/wall.png"
+a_img = "image/aiguille.png"
+b_img = "image/ether.png"
+c_img = "image/tube.png"
+mcgyver_img = "image/MacGyver.png"
+mcgyver1_img = "image/MacGyver1.png"
+mcgyver2_img = "image/MacGyver2.png"
+mcgyver3_img = "image/MacGyver3.png"
