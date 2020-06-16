@@ -51,3 +51,34 @@ class Maze:
         aiguille = pygame.image.load(a_img)
         ether = pygame.image.load(b_img)
         tube = pygame.image.load(c_img)
+        # compteur pour les lignes (listes dans la liste principale)
+        line_number = 0
+        for line in self.structure:
+            sprite_number = 0  # compteur pour chaque élément dans chaque ligne
+            for sprite in line:
+                x = sprite_number * sprite_size
+                y = line_number * sprite_size
+                if sprite == "W":
+                    window.blit(wall, (x, y))
+                elif sprite == "S":
+                    window.blit(badguy, (x, y))
+                elif sprite == "A":
+                    window.blit(aiguille, (x, y))
+                elif sprite == "B":
+                    window.blit(ether, (x, y))
+                elif sprite == "C":
+                    window.blit(tube, (x, y))
+                else:
+                    window.blit(background, (x, y))
+                sprite_number += 1
+            line_number += 1
+
+class MacGyver:
+    def __init__(self, move, maze):
+
+        self.cell_x = 0
+        self.cell_y = 0
+        self.x = 0
+        self.y = 0
+        self.move = pygame.image.load(mcgyver_img).convert_alpha()
+        self.maze = maze
