@@ -4,7 +4,7 @@ pygame.init()
 window = pygame.display.set_mode((window_size, window_size))
 labyrinth = Maze('maze.txt')
 labyrinth.generate()
-continueGame= True
+continueGame = True
 MacGyver = MacGyver(mcgyver_img, labyrinth)
 compteurA = 0
 continueMain = True
@@ -15,13 +15,13 @@ while continueMain:
     window.blit(startingMenu, (0, 0))
     pygame.display.flip()
     continueTitleScreen = True
-    continueGame= True
+    continueGame = True
     while continueTitleScreen:
         for event in pygame.event.get():
             if event.type == KEYDOWN and event.key == K_ESCAPE:
                 continueTitleScreen = False
                 continueMain = False
-                continueGame= False
+                continueGame = False
                 pygame.quit()
                 os._exit(0)
             elif event.type == KEYDOWN and event.key == K_RETURN:
@@ -66,7 +66,7 @@ while continueMain:
                             "YOU COLLECTED AN OBJECT : THE TUBE. OJECTS COUNT = ", compteurA)
                     if MacGyver.maze.structure[MacGyver.cell_y][MacGyver.cell_x] == 'S' and compteurA == 3:
                         print(" YOU WIN")
-                        continueGame= False
+                        continueGame = False
                         window.blit(youwon, (0, 0))
                         pygame.display.flip()
                         if event.type == KEYDOWN and event.key == K_ESCAPE:
@@ -75,7 +75,7 @@ while continueMain:
 
                     elif MacGyver.maze.structure[MacGyver.cell_y][MacGyver.cell_x] == 'S' and compteurA < 3:
                         print("YOU LOOSE")
-                        continueGame= False
+                        continueGame = False
                         window.blit(youlost, (0, 0))
                         pygame.display.flip()
                         if event.type == KEYDOWN and event.key == K_ESCAPE:
